@@ -4,6 +4,7 @@ import LeftSideNav from "../shared/LeftSideNav/LeftSideNav";
 import Navbar from "../shared/Navbar/Navbar";
 import RightSideNav from "../shared/RightSideNav/RightSideNav";
 import BreakingNews from "./BreakingNews";
+import NewsCard from "./NewsCard";
 
 const Home = () => {
   const news = useLoaderData();
@@ -18,8 +19,11 @@ const Home = () => {
         <div className="border">
           <LeftSideNav></LeftSideNav>
         </div>
+        {/* news container */}
         <div className="md:col-span-2 border">
-          <h2 className="text-4xl">News is coming soon...</h2>
+          {news.map((aNews) => (
+            <NewsCard key={aNews._id} news={aNews}></NewsCard>
+          ))}
         </div>
         <div className="border">
           <RightSideNav></RightSideNav>
