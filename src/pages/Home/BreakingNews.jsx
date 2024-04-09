@@ -2,7 +2,7 @@ import Marquee from "react-fast-marquee";
 import { Link } from "react-router-dom";
 const BreakingNews = () => {
   return (
-    <div className="flex">
+    <div className="flex bg-gray-200 rounded">
       <button className="btn btn-secondary">Breaking News</button>
 
       <Marquee pauseOnHover={true} speed={100}>
